@@ -1,0 +1,31 @@
+import React from "react";
+import { StyleSheet } from "react-native";
+import { Header, Body, Right, Button, Icon, Title } from "native-base";
+import ThemeColors from "../constants/ThemeColors";
+
+class MyHeader extends React.Component {
+  render() {
+    return (
+      <Header hasTabs noShadow transparent noLeft style={styles.header}>
+        <Body>
+          <Title>WhatsApp</Title>
+        </Body>
+        <Right>
+          <Button transparent>
+            <Icon name="search" />
+          </Button>
+          <Button transparent>
+            <Icon type="SimpleLineIcons" name="options-vertical" />
+          </Button>
+        </Right>
+      </Header>
+    );
+  }
+}
+export default MyHeader;
+
+const styles = StyleSheet.create({
+  header: {
+    backgroundColor: ThemeColors.primary,
+  },
+});
